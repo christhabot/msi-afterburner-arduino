@@ -8,7 +8,13 @@ from pystray import Icon, MenuItem, Menu
 from PIL import Image
 from datetime import datetime
 
-# Set the working directory to the folder of the script
+# Change these
+total_ram = 16000
+icon_path = r"your path to the .png file"
+
+
+
+
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
 ser = serial.Serial('COM3', 9600)
@@ -86,7 +92,6 @@ def get_ram_usage():
     log_entry = get_log_entry_from_file()  
     if log_entry:
         data = parse_log(log_entry)
-        total_ram = 16273  
         ram_usage_percentage = (data["ram_usage"] / total_ram) * 100
         if ram_usage_percentage >= 100:
             ram_usage_percentage = 99
@@ -134,7 +139,6 @@ def monitor_system():
         time.sleep(0.1)
 
 def setup_tray():
-    icon_path = r"C:\Users\chris\Documents\vscode\ptython\crazy ahh\icon.png"  # Use absolute path to the icon
     image = Image.open(icon_path)  # Open icon image
     icon = Icon("System Monitor", image, menu=Menu(MenuItem('Exit', on_quit)))  # Exit stops the tray and quits the program
     icon.run()
