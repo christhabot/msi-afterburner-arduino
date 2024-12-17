@@ -10,6 +10,7 @@ connect your lcd display to the arduino like this:
 
 For the python code, place the .py and .png file inside a folder.
 __make sure to change the ram variable__ to your computers amount of ram, which you can find in task manager (if you have for example 16 gb, instead type 16000, turning it into megabytes)
+__also make sure to change the icon path__ which is right below the ram variable. It should look something like C:\Users\your_user\Documents\vscode\idk\somefolder\icon.png
 Also install all the dependencies, if you haven't already, by running in cmd:
 
 ```pip install pyserial```
