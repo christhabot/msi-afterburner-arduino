@@ -5,6 +5,7 @@ Displays: gpu and cpu temperature and usage, ram usage and fps from afterburner,
 Upload the arduino code onto your arduino, you will only have to do this once, since it automatically saves the code on it's flash memory
 connect your lcd display to the arduino like this:
 ![image](https://github.com/user-attachments/assets/f5619862-e0b2-4ab2-9a82-bc0ae0404f4d)
+
 (if your display has more than 4 pins, meaning its uart, you will have to search up how to connect it and replace some code)
 
 For the python code, place the .py and .png file inside a folder.
