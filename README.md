@@ -11,15 +11,22 @@ connect your lcd display to the arduino like this:
 For the python code, place the .py and .png file inside a folder.
 __make sure to change the ram variable__ to your computers amount of ram, which you can find in task manager (if you have for example 16 gb, instead type 16000, turning it into megabytes)
 Also install all the dependencies, if you haven't already, by running in cmd:
+
 ```pip install pyserial```
+
 ```pip install pillow```
+
 ```pip install pystray```
+
 ```pip install tk```
+
 If you'd like a different image, just replace the .png file with your own, which must have the same name.
 
 Then, in order to turn the .py file into a .exe file, do the following:
 copy your folder path, and type in cmd:
+
 ``` cd your_folder_path ```
+
 ``` pyinstalled --onefile --noconsole your_file_name.py ``` (if you havent changed it, file name should be display.py)
 
 then, open the folder, you should see multiple files created. Head into dist, and you will find your .exe file!
