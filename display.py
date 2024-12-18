@@ -27,8 +27,8 @@ def get_log_entry_from_file():
         print(f"File does not exist: {file_path}")
         return None
     file_size = os.path.getsize(file_path)
-    if file_size > 512 * 1024 * 1024:  
-        print(f"File exceeds 512 MB, deleting {file_path}...")
+    if file_size > 512 * 1024:  
+        print(f"File exceeds 512 Kb, deleting {file_path}...")
         os.remove(file_path)
         return None
     try:
